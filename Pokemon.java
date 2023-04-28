@@ -1,0 +1,72 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package programapokemon;
+
+/**
+ *
+ * @author Alex
+ */
+public class Pokemon {
+    
+    private String nombre;
+    private int nivel;
+    private int vida;
+    private int ataque;
+    private int defensa;
+    
+    public Pokemon(String nombre, int nivel, int vida, int ataque, int defensa) {
+        this.nombre = nombre;
+        this.nivel = nivel;
+        this.vida = vida;
+        this.ataque = ataque;
+        this.defensa = defensa;
+    }
+    
+    public String getNombre() {
+        return nombre;
+    }
+    
+    public int getNivel() {
+        return nivel;
+    }
+    
+    public int getVida() {
+        return vida;
+    }
+    
+    public int getAtaque() {
+        return ataque;
+    }
+    
+    public int getDefensa() {
+        return defensa;
+    }
+    
+    public void setVida(int vida) {
+        this.vida = vida;
+    }
+    
+    public void atacar(Pokemon objetivo) {
+        int danio = this.ataque - objetivo.defensa;
+        if (danio < 0) {
+            danio = 0;
+        }
+        objetivo.setVida(objetivo.getVida() - danio);
+        System.out.println(this.nombre + " atacó a " + objetivo.getNombre() + " y le hizo " + danio + " puntos de daño.");
+    }
+
+    
+
+        public Pokemon() {
+        }
+    }
+
+
+
+
+    
+    
+    
+
